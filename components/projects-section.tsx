@@ -2,7 +2,7 @@
 
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Github, ExternalLink, Smartphone, ChevronDown, ChevronUp } from "lucide-react"
+import { Github, Smartphone, ChevronDown, ChevronUp } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
 import { cn } from "@/lib/utils"
 import { useScrollAnimation } from "@/lib/useScrollAnimation"
@@ -16,7 +16,7 @@ export function ProjectsSection() {
       videoUrl: "https://res.cloudinary.com/dj2u6y8iv/video/upload/v1763750451/Screenrecorder-2025-11-12-17-20-31-741_lcykle.mp4",
       features: ["Firestore Database", "Geolocator Integration", "Real-time Updates", "Booking System"],
       tech: ["Flutter", "Firebase", "Firestore", "Geolocator"],
-      github: "#",
+      github: "https://github.com/samardeeps/Servease-Final",
       demo: "#",
       color: "from-orange-500 to-red-500",
       glowColor: "shadow-orange-500/30",
@@ -28,7 +28,7 @@ export function ProjectsSection() {
       videoUrl: "https://res.cloudinary.com/dj2u6y8iv/video/upload/v1763751574/foodora_voegyu.mp4",
       features: ["BLoC Architecture", "Restaurant Discovery", "Order Management", "Real-time Tracking"],
       tech: ["Flutter", "Dart", "BLoC", "Firebase"],
-      github: "#",
+      github: "https://github.com/samardeeps/Foodora",
       demo: "#",
       color: "from-green-500 to-emerald-500",
       glowColor: "shadow-green-500/30",
@@ -40,7 +40,7 @@ export function ProjectsSection() {
       videoUrl: "https://res.cloudinary.com/dj2u6y8iv/video/upload/v1763751546/Screenrecorder-2025-11-12-18-39-09-115_lcdkn9.mp4",
       features: ["Mood Analytics", "Firebase Auth", "Error Handling", "Data Visualization"],
       tech: ["Flutter", "Firebase", "Provider", "Charts"],
-      github: "#",
+      github: "https://github.com/samardeeps/mood_tracker1",
       demo: "#",
       color: "from-purple-500 to-pink-500",
       glowColor: "shadow-purple-500/30",
@@ -49,10 +49,10 @@ export function ProjectsSection() {
       title: "FlutFlix",
       description:
         "A comprehensive movie discovery app powered by TMDB API with dynamic content updates and smooth navigation.",
-      videoUrl: "",
+      videoUrl: "https://res.cloudinary.com/dj2u6y8iv/video/upload/v1763820323/Recording_2025-11-22_193323_tayvv4.mp4",
       features: ["REST API Integration", "State Management", "Dynamic UI Updates", "Search & Filter"],
       tech: ["Flutter", "Dart", "TMDB API", "Provider"],
-      github: "#",
+      github: "https://github.com/samardeeps/FlutFlixx",
       demo: "#",
       color: "from-blue-500 to-cyan-500",
       glowColor: "shadow-blue-500/30",
@@ -212,21 +212,19 @@ function ProjectItem({
                   </div>
 
                   <div className="flex flex-wrap gap-3 mt-auto">
-                    <Button
-                      className="gradient-primary text-white rounded-full hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex-1 sm:flex-none font-semibold"
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <Github className="w-4 h-4 mr-2" />
-                      GitHub
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="rounded-full border border-border text-foreground hover:bg-card hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 bg-transparent flex-1 sm:flex-none font-semibold"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </Button>
+                      <Button
+                        className="gradient-primary text-white rounded-full hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex-1 sm:flex-none font-semibold"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        GitHub
+                      </Button>
+                    </a>
                   </div>
                 </div>
 

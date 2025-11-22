@@ -23,19 +23,19 @@ export function ContactSection() {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com",
+      href: "https://github.com/samardeeps",
       color: "from-primary to-accent",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/samardeep-singh-498830258",
       color: "from-accent to-primary",
     },
     {
       icon: Mail,
       label: "Email",
-      href: "mailto:contact@example.com",
+      href: "mailto:samardeepnew@gmail.com",
       color: "from-primary to-accent",
     },
   ]
